@@ -26,11 +26,14 @@ namespace SpRestaurant
             }
         }
 
+        //Feature Envy: This method uses only the data of the Order and Item objects
         private void CalculateAmount(Order order)
         {
             var total = 0d;
+            //Switch statements: We can use polymorphism 
             foreach (var item in order.Items)
             {
+                //Data class: The Item class is a data class, we can add some functionality to it
                 if (item.ItemId == Constants.Drink)
                 {
                     var setsOfThree = item.Quantity / 3;
@@ -48,6 +51,7 @@ namespace SpRestaurant
             order.TotalAmount = total;
         }
 
+        //Feature Envy: This method uses primarily the data of the Order and Item objects
         private void PrintReceipt(Order order)
         {
             string customerEmail = order.CustomerEmail;
