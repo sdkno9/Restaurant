@@ -4,8 +4,8 @@ namespace SpRestaurant.Utilities
 {
     public class Constants
     {
-        public static readonly Guid Drink;
-        public static readonly Guid CheeseBurger;
-        public static readonly Guid CheeseBurgerMenu;
+        public static readonly int Drink = 1;
+        public static readonly int CheeseBurger = 2;
+        public static readonly int CheeseBurgerMenu = 3;
     }
 }

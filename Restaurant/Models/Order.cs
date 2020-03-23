@@ -8,12 +8,12 @@ namespace SpRestaurant.Models
     public class Order
     {
         public List<Item> Items { get; set; }
-        public double TotalAmount { get; set; }
+        public decimal TotalAmount { get; set; }
         public string CustomerEmail { get; set; }
 
         public void CalculateAmount()
         {
-            var total = 0d;
+            var total = 0m;
 
             if (Items?.Any() == true)
             {
@@ -30,7 +30,7 @@ namespace SpRestaurant.Models
                     }
                     else if (item.ItemId == Constants.CheeseBurgerMenu)
                     {
-                        total += item.Price * item.Quantity * 0.9;
+                        total += item.Price * item.Quantity * 0.9m;
                     }
                 }
             }
